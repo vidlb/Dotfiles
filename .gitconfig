@@ -1,0 +1,25 @@
+[user]
+	name = Vincent Delbar
+	email = vincent.delbar@latelescop.fr
+	signinkey = C9835132F4EE1F0D
+[credential]
+	helper = cache
+[core]
+	excludesfile = ~/.gitignore
+[gpg]
+	program = gpg2
+[init]
+	defaultBranch = main
+[diff]
+	tool = difftastic
+[difftool]
+	prompt = false
+[difftool "difftastic"]
+	cmd = difft "$LOCAL" "$REMOTE"
+# Use a pager for large output, just like other git commands.
+[pager]
+	difftool = true
+# `git dft` is less to type than `git difftool`.
+[alias]
+	dft = difftool
+
