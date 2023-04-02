@@ -12,7 +12,6 @@ set si
 set wrap
 set mouse=a
 set splitright
-set undofile
 syntax on
 set t_ut=                " fix 256 colors in tmux http://sunaku.github.io/vim-256color-bce.html
 
