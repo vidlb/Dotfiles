@@ -83,7 +83,7 @@ fi
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(history-substring-search git systemd common-aliases)
+plugins=(history-substring-search git systemd)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -152,11 +152,18 @@ else
     fi
 fi
 unset __conda_setup
-
 # <<< conda initialize <<<
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 if [[ $ZSH_THEME == "powerlevel10k/powerlevel10k" ]]; then
     [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 fi
+
+# Cool CLI tools 
+eval $(thefuck --alias)
+eval "$(zoxide init zsh)"
+
+# ZSH specific env
 export COLORTERM=truecolor
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
