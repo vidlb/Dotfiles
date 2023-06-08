@@ -166,7 +166,7 @@ fi
 
 # Rust CLI tools 
 command -v thefuck >/dev/null && eval $(thefuck --alias)
-command -v zoxide && eval "$(zoxide init zsh)"
+command -v zoxide >/dev/null && eval "$(zoxide init zsh)"
 
 # ZSH specific env
 export COLORTERM=truecolor
