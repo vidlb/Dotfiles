@@ -154,12 +154,17 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+# pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+
+# Powerlevel10k
 if [[ $ZSH_THEME == "powerlevel10k/powerlevel10k" ]]; then
     [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 fi
 
-# Cool CLI tools 
+# Rust CLI tools 
 eval $(thefuck --alias)
 eval "$(zoxide init zsh)"
 
@@ -167,3 +172,4 @@ eval "$(zoxide init zsh)"
 export COLORTERM=truecolor
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
