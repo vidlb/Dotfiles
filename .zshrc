@@ -157,7 +157,7 @@ unset __conda_setup
 # pyenv
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
+command -v pyenv >/dev/null && eval "$(pyenv init -)"
 
 # Powerlevel10k
 if [[ $ZSH_THEME == "powerlevel10k/powerlevel10k" ]]; then
@@ -165,8 +165,8 @@ if [[ $ZSH_THEME == "powerlevel10k/powerlevel10k" ]]; then
 fi
 
 # Rust CLI tools 
-eval $(thefuck --alias)
-eval "$(zoxide init zsh)"
+command -v thefuck >/dev/null && eval $(thefuck --alias)
+command -v zoxide && eval "$(zoxide init zsh)"
 
 # ZSH specific env
 export COLORTERM=truecolor
