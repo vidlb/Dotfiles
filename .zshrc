@@ -140,6 +140,21 @@ alias ai='sudo apt-get install'
 
 ### Python
 
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/vidlb/miniforge3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/vidlb/miniforge3/etc/profile.d/conda.sh" ]; then
+        . "/home/vidlb/miniforge3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/vidlb/miniforge3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
 # pyenv
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
@@ -158,4 +173,5 @@ command -v zoxide >/dev/null && eval "$(zoxide init zsh)"
 export COLORTERM=truecolor
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
 
