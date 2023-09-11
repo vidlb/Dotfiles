@@ -179,3 +179,10 @@ export COLORTERM=truecolor
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 
+
+# bun completions
+[ -s "/home/vincent/.bun/_bun" ] && source "/home/vincent/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
