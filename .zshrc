@@ -186,3 +186,8 @@ export COLORTERM=truecolor
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+export MODULAR_HOME="/home/vidlb/.modular"
+export PATH="/home/vidlb/.modular/pkg/packages.modular.com_mojo/bin:$PATH"
+
+# bun completions
+[ -s "/home/vidlb/.bun/_bun" ] && source "/home/vidlb/.bun/_bun"

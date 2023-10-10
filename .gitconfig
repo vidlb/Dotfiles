@@ -2,6 +2,7 @@
 	name = Vincent Delbar
 	email = vincent.delbar@latelescop.fr
 	signinkey = C9835132F4EE1F0D
+	signingkey = E1966AD3A8A249E8
 [credential]
 	helper = cache
 [core]
