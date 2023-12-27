@@ -29,11 +29,10 @@ Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'junegunn/vim-easy-align'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'catppuccin/vim', { 'as': 'catppuccin' }
 call plug#end()
 
-let g:dracula_colorterm = 0
-colorscheme dracula
+colorscheme catppuccin_mocha
 "NERDTree
 let NERDTreeShowHidden=1
 "airline
