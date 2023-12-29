@@ -30,9 +30,10 @@ Plug 'junegunn/vim-easy-align'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'catppuccin/vim', { 'as': 'catppuccin' }
+Plug 'jschmold/sweet-dark.vim'
 call plug#end()
 
-colorscheme catppuccin_mocha
+colorscheme catppuccin_mocha 
 "NERDTree
 let NERDTreeShowHidden=1
 "airline
