@@ -179,15 +179,5 @@ export COLORTERM=truecolor
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 
-
-# bun completions
-[ -s "/home/vincent/.bun/_bun" ] && source "/home/vincent/.bun/_bun"
-
-# bun
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
 export MODULAR_HOME="/home/vidlb/.modular"
 export PATH="/home/vidlb/.modular/pkg/packages.modular.com_mojo/bin:$PATH"
-
-# bun completions
-[ -s "/home/vidlb/.bun/_bun" ] && source "/home/vidlb/.bun/_bun"
