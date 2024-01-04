@@ -4,7 +4,7 @@
 	signinkey = C9835132F4EE1F0D
 	signingkey = E1966AD3A8A249E8
 [credential]
-	helper = cache
+	helper = store 
 [core]
 	excludesfile = ~/.gitignore
 [gpg]
