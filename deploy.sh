@@ -1,5 +1,5 @@
 #!/bin/bash
-for f in $(find . -type f ! -path "*/.git/*" ! -path '*/deploy.sh'); do
+for f in $(find . -type f ! -path "*/.git/*" ! -path '*/deploy.sh' ! -path '*/README.md'); do
     filepath="${f:2}"
     dirpath=$(dirname $filepath)
     if [ ! -d "$HOME/$dirpath" ]; then
