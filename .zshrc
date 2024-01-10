@@ -167,3 +167,5 @@ export COLORTERM=truecolor
 
 export MODULAR_HOME="/home/vidlb/.modular"
 export PATH="/home/vidlb/.modular/pkg/packages.modular.com_mojo/bin:$PATH"
+
+export PATH=$PATH:/home/vidlb/.spicetify
