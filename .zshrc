@@ -177,8 +177,3 @@ export COLORTERM=truecolor
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-
-export MODULAR_HOME="/home/vidlb/.modular"
-export PATH="/home/vidlb/.modular/pkg/packages.modular.com_mojo/bin:$PATH"
-
-export PATH=$PATH:/home/vidlb/.spicetify
