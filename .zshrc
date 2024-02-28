@@ -129,7 +129,6 @@ compinit
 
 ### Aliases
 alias s='sudo'
-alias pgadmin='source /home/vidlb/Applications/venv/pgadmin4/bin/activate && pgadmin4 ; deactivate'
 alias ipy='python3 -m IPython'
 alias py='python3'
 alias updt='sudo aptitude update && sudo aptitude full-upgrade'
