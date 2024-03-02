@@ -10,19 +10,6 @@
 	program = gpg2
 [init]
 	defaultBranch = main
-[diff]
-	tool = difftastic
-[difftool]
-	prompt = false
-[difftool "difftastic"]
-	cmd = difft "$LOCAL" "$REMOTE"
-# Use a pager for large output, just like other git commands.
-[pager]
-	difftool = true
-# `git dft` is less to type than `git difftool`.
-[alias]
-	dft = difftool
-
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
