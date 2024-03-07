@@ -129,6 +129,7 @@ compinit
 
 ### Aliases
 alias s='sudo'
+alias sctl='sudo systemctl'
 alias ipy='python3 -m IPython'
 alias py='python3'
 alias updt='sudo aptitude update && sudo aptitude full-upgrade'
