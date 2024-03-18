@@ -177,3 +177,6 @@ export COLORTERM=truecolor
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+function load_15mn {
+	echo $(( $(cat /proc/loadavg | awk '{ print $3 }') / $(nproc) * 100 ))
+}
