@@ -180,3 +180,5 @@ export COLORTERM=truecolor
 function load_15mn {
 	echo $(( $(cat /proc/loadavg | awk '{ print $3 }') / $(nproc) * 100 ))
 }
+
+. "$HOME/.cargo/env"
