@@ -182,3 +182,4 @@ function load_15mn {
 }
 
 . "$HOME/.cargo/env"
+eval "$(uv generate-shell-completion zsh)"
