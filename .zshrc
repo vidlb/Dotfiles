@@ -158,18 +158,12 @@ if [ -f "/home/vidlb/mambaforge/etc/profile.d/mamba.sh" ]; then
 fi
 # <<< conda initialize <<<
 
-# pyenv
-export PYENV_ROOT="$HOME/.pyenv"
-command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-command -v pyenv >/dev/null && eval "$(pyenv init -)"
-
 # Powerlevel10k
 if [[ $ZSH_THEME == "powerlevel10k/powerlevel10k" ]]; then
     [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 fi
 
 # Rust CLI tools 
-command -v thefuck >/dev/null && eval $(thefuck --alias)
 command -v zoxide >/dev/null && eval "$(zoxide init zsh)"
 
 # ZSH specific env
@@ -183,3 +177,10 @@ function load_15mn {
 
 . "$HOME/.cargo/env"
 eval "$(uv generate-shell-completion zsh)"
+
+# bun completions
+[ -s "/home/vidlb/.bun/_bun" ] && source "/home/vidlb/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
