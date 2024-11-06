@@ -1,5 +1,5 @@
 set number relativenumber
-set smarttab
+set expandtab
 set shiftwidth=4 tabstop=4 softtabstop=4
 set smartcase
 set hlsearch
