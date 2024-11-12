@@ -155,7 +155,7 @@ function load_15mn {
 	echo $(( $(cat /proc/loadavg | awk '{ print $3 }') / $(nproc) * 100 ))
 }
 
-. "$HOME/.cargo/env"
+[ -f "$HOME/.cargo/env" ] && . "$HOME/.cargo/env"
 command -v uv >/dev/null && eval "$(uv generate-shell-completion zsh)"
 
 # bun completions
