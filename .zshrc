@@ -146,8 +146,12 @@ fi
 # Rust CLI tools 
 command -v zoxide >/dev/null && eval "$(zoxide init zsh)"
 
-# ZSH specific env
+# Colors
 export COLORTERM=truecolor
+
+if [[ "$TERM_PROGRAM" == "ghostty" ]]; then
+    export TERM=xterm-256color
+fi
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
@@ -164,3 +168,18 @@ command -v uv >/dev/null && eval "$(uv generate-shell-completion zsh)"
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+# >>> mamba initialize >>>
+# !! Contents within this block are managed by 'micromamba shell init' !!
+export MAMBA_EXE='/home/vidlb/.local/bin/micromamba';
+if [ -f "$MAMBA_EXE" ] ; then
+    export MAMBA_ROOT_PREFIX='y';
+    __mamba_setup="$("$MAMBA_EXE" shell hook --shell zsh --root-prefix "$MAMBA_ROOT_PREFIX" 2> /dev/null)"
+    if [ $? -eq 0 ]; then
+        eval "$__mamba_setup"
+    else
+        alias micromamba="$MAMBA_EXE"  # Fallback on help from micromamba activate
+    fi
+    unset __mamba_setup
+    # <<< mamba initialize <<<
+fi
