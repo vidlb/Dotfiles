@@ -171,6 +171,7 @@ if [ -f "$MAMBA_EXE" ] ; then
         eval "$__mamba_setup"
     else
         alias micromamba="$MAMBA_EXE"  # Fallback on help from micromamba activate
+        alias mamba="$MAMBA_EXE"
     fi
     unset __mamba_setup
     # <<< mamba initialize <<<
