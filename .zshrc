@@ -155,7 +155,7 @@ function load_15mn {
 command -v uv >/dev/null && eval "$(uv generate-shell-completion zsh)"
 
 # bun completions
-[ -s "/home/vidlb/.bun/_bun" ] && source "/home/vidlb/.bun/_bun"
+[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
 
 # bun
 export BUN_INSTALL="$HOME/.bun"
@@ -163,9 +163,9 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 
 # >>> mamba initialize >>>
 # !! Contents within this block are managed by 'micromamba shell init' !!
-export MAMBA_EXE='/home/vidlb/.local/bin/micromamba';
+export MAMBA_EXE="$HOME/.local/bin/micromamba";
 if [ -f "$MAMBA_EXE" ] ; then
-    export MAMBA_ROOT_PREFIX='y';
+    export MAMBA_ROOT_PREFIX="$HOME/.micromamba";
     __mamba_setup="$("$MAMBA_EXE" shell hook --shell zsh --root-prefix "$MAMBA_ROOT_PREFIX" 2> /dev/null)"
     if [ $? -eq 0 ]; then
         eval "$__mamba_setup"
