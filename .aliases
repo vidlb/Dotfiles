@@ -57,5 +57,3 @@ alias lsa='ls -Alh --color=auto'
 alias diff='colordiff'
 
 alias pkgbuild='sudo debuild -i -us -uc -b'
-alias occ='ssh cloud docker exec --user www-data -i nextcloud-aio-nextcloud php occ'
-
