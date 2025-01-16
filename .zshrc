@@ -128,15 +128,7 @@ fpath+=~/.zfunc
 compinit
 
 ### Aliases
-alias s='sudo'
-alias sctl='sudo systemctl'
-alias ipy='python3 -m IPython'
-alias py='python3'
-alias updt='sudo aptitude update && sudo aptitude full-upgrade'
-alias erj='sudo journalctl -b -p err'
-alias erd='sudo dmesg -ku -l err'
-alias aps='apt search'
-alias ai='sudo apt-get install'
+source ~/.aliases
 
 # Powerlevel10k
 if [[ $ZSH_THEME == "powerlevel10k/powerlevel10k" ]]; then

@@ -1,0 +1,62 @@
+# -*- coding: utf-8 -*-
+
+# Root - Security
+alias root='sudo -i'
+alias fstab='sudo nano /etc/fstab'
+alias chown='chown --preserve-root'
+alias chmod='chmod --preserve-root'
+alias chgrp='chgrp --preserve-root'
+alias rm='rm -I --preserve-root'
+alias mv='mv -i'
+alias cp='cp -vi'
+alias cpr='cp -vir'
+alias ln='ln -i'
+alias ckrk='sudo rkhunter --check --sk'
+
+# Error log
+alias erj='sudo journalctl -b -p err'
+alias erd='sudo dmesg -ku -l err'
+
+# Memory
+alias free='free -mh'
+alias meminfo='free -m -l -t'
+
+# Proc activity
+alias psmem='ps auxf | sort -nr -k 4'
+alias psmem10='ps auxf | sort -nr -k 4 | head -10'
+alias pscpu='ps auxf | sort -nr -k 3'
+alias pscpu10='ps auxf | sort -nr -k 3 | head -10'
+
+# Tree-cks
+alias ..='cd ..'
+alias ...='cd ../../'
+alias ....='cd ../../../'
+alias .....='cd ../../../'
+
+# Short commands
+alias c='clear'
+alias s='sudo'
+alias h='history'
+alias vi='vim'
+alias svi='sudo vi'
+alias ipy='python3 -m IPython'
+alias py='python3'
+alias shtd='/sbin/shutdown now'
+alias sctl='sudo systemctl'
+
+if [ ! -z "$(which apt)" ]; then
+    alias a='aptitude'
+    alias ai='sudo apt-get install'
+    alias aps='apt search'
+    alias updt='sudo aptitude update && sudo aptitude full-upgrade'
+fi
+
+# Color
+alias grep='grep --color=auto'
+alias lsa='ls -Alh --color=auto'
+alias diff='colordiff'
+
+alias pkgbuild='sudo debuild -i -us -uc -b'
+alias occ='ssh cloud docker exec --user www-data -i nextcloud-aio-nextcloud php occ'
+alias mamba='micromamba'
+
